@@ -1,0 +1,44 @@
+:root {
+  --paper: #f9f6f2;
+  --ink: #1d2433;
+  --muted: #5b6474;
+  --accent: #2f59ab;
+  --rule: #e4ddd3;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111419;
+    --ink: #e8e6e1;
+    --muted: #a3aab6;
+    --accent: #8fb0ef;
+    --rule: #2a2f38;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111419;
+  --ink: #e8e6e1;
+  --muted: #a3aab6;
+  --accent: #8fb0ef;
+  --rule: #2a2f38;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 40px 16px 72px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+header img { width: 56px; height: 56px; border-radius: 13px; border: 1px solid var(--rule); }
+header p { margin: 0; color: var(--muted); font-size: 15px; }
+h1 { font-size: 28px; line-height: 1.25; margin: 0; }
+h2 { font-size: 19px; margin: 36px 0 8px; padding-top: 20px; border-top: 1px solid var(--rule); }
+p, li { max-width: 62ch; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.lede { font-size: 18px; }
+.meta { color: var(--muted); font-size: 15px; }
+footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
